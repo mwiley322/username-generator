@@ -148,4 +148,3 @@ describe "#generate_username" do
   end
 
 end
-
