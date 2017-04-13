@@ -5,14 +5,16 @@ def format_name(first, last)
   if first.empty? || last.empty?
     nil
   else
-    no_space_first = first.delete(' ')
-    no_space_last = last.delete(' ')
-    return (no_space_first[0] + no_space_last).downcase
+    formatted_first = first.delete(' ')
+    formatted_last = last.delete(' ')
+    return (formatted_first[0] + formatted_last).downcase
   end
 end
 
 def format_year num
-  # p num[2..last]
+  unless num.to_s.length != 4
+    num.to_s[2..3]
+  end
 end
 
 def build_username
